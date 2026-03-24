@@ -1,0 +1,25 @@
+{
+  "name": "qr_code_generator",
+  "version": "1.0.0",
+  "description": "[![Build Frontend](https://github.com/<USERNAME>/<REPO>/actions/workflows/frontend_job.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/frontend_job.yml)",
+  "main": "script.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "lint": "eslint . --fix",
+    "lint-check": "eslint .",
+    "test": "vitest run",
+    "test-coverage": "vitest run --coverage",
+    "tsc": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.1",
+    "eslint": "^10.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.1"
+  }
+}

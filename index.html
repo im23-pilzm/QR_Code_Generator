@@ -1,89 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QR Code Generator - Erstellen Sie QR-Codes für Text und URLs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="QR Code Generator - Erstellen Sie QR-Codes für Text und URLs"
+    />
     <title>QR Code Generator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>QR Code Generator</h1>
-        <p>Erstellen Sie individuelle QR-Codes für Texte und URLs</p>
+      <h1>QR Code Generator</h1>
+      <p>Erstellen Sie individuelle QR-Codes für Texte und URLs</p>
     </header>
 
     <main>
-        <div class="container">
-            <form id="qr-form">
-                <div class="form-group">
-                    <label for="text-input">Text oder URL eingeben:</label>
-                    <input 
-                        type="text" 
-                        id="text-input" 
-                        name="text" 
-                        placeholder="https://example.com oder beliebiger Text"
-                        required
-                        autocomplete="off"
-                    >
+      <div class="container">
+        <form id="qr-form">
+          <div class="form-group">
+            <label for="text-input">Text oder URL eingeben:</label>
+            <input
+              type="text"
+              id="text-input"
+              name="text"
+              placeholder="https://example.com oder beliebiger Text"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="size-select">Größe auswählen:</label>
+            <select id="size-select" name="size">
+              <option value="128">Klein (128x128)</option>
+              <option value="256" selected>Mittel (256x256)</option>
+              <option value="512">Groß (512x512)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Farben anpassen:</label>
+            <div class="color-picker-group">
+              <div>
+                <label for="qr-color">QR-Code Farbe:</label>
+                <div class="color-input-wrapper">
+                  <input
+                    type="color"
+                    id="qr-color"
+                    name="qrColor"
+                    value="#000000"
+                  />
+                  <span class="color-value" id="qr-color-value">#000000</span>
                 </div>
-
-                <div class="form-group">
-                    <label for="size-select">Größe auswählen:</label>
-                    <select id="size-select" name="size">
-                        <option value="128">Klein (128x128)</option>
-                        <option value="256" selected>Mittel (256x256)</option>
-                        <option value="512">Groß (512x512)</option>
-                    </select>
+              </div>
+              <div>
+                <label for="bg-color">Hintergrundfarbe:</label>
+                <div class="color-input-wrapper">
+                  <input
+                    type="color"
+                    id="bg-color"
+                    name="bgColor"
+                    value="#ffffff"
+                  />
+                  <span class="color-value" id="bg-color-value">#ffffff</span>
                 </div>
-
-                <div class="form-group">
-                    <label>Farben anpassen:</label>
-                    <div class="color-picker-group">
-                        <div>
-                            <label for="qr-color">QR-Code Farbe:</label>
-                            <div class="color-input-wrapper">
-                                <input 
-                                    type="color" 
-                                    id="qr-color" 
-                                    name="qrColor" 
-                                    value="#000000"
-                                >
-                                <span class="color-value" id="qr-color-value">#000000</span>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="bg-color">Hintergrundfarbe:</label>
-                            <div class="color-input-wrapper">
-                                <input 
-                                    type="color" 
-                                    id="bg-color" 
-                                    name="bgColor" 
-                                    value="#ffffff"
-                                >
-                                <span class="color-value" id="bg-color-value">#ffffff</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" id="generate-btn">
-                    QR-Code generieren
-                </button>
-            </form>
-
-            <div id="qrcode-container">
-                <div id="qrcode"></div>
+              </div>
             </div>
+          </div>
+
+          <button type="submit" id="generate-btn">QR-Code generieren</button>
+        </form>
+
+        <div id="qrcode-container">
+          <div id="qrcode"></div>
         </div>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 QR Code Generator | Erstellt mit <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank">QRCode.js</a></p>
+      <p>
+        &copy; 2026 QR Code Generator | Erstellt mit
+        <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank"
+          >QRCode.js</a
+        >
+      </p>
     </footer>
 
     <!-- QRCode.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
