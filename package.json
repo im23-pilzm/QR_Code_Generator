@@ -4,6 +4,8 @@
   "description": "[![Build Frontend](https://github.com/<USERNAME>/<REPO>/actions/workflows/frontend_job.yml/badge.svg)](https://github.com/<USERNAME>/<REPO>/actions/workflows/frontend_job.yml)",
   "main": "script.js",
   "scripts": {
+    "e2e": "testcafe chrome e2e.js",
+    "e2e:headless": "testcafe chrome:headless e2e.js",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "lint": "eslint . --fix",
@@ -19,6 +21,7 @@
     "@vitest/coverage-v8": "^4.1.1",
     "eslint": "^10.1.0",
     "prettier": "^3.8.1",
+    "testcafe": "^3.7.4",
     "typescript": "^6.0.2",
     "vitest": "^4.1.1"
   }
